@@ -344,7 +344,7 @@ address a {
         display: none;
     }
     .hero {
-        background: url("/assets/hero-img-planting.jpg");
+        background: url("assets/hero-img-planting.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     }
