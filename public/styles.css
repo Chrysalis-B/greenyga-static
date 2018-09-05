@@ -343,7 +343,7 @@ address a {
 }
 
 @media screen and (max-width: 600px) {
-    .hero-images img {
+    .hero-images {
         display: none;
     }
     .hero {
