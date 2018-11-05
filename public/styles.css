@@ -175,7 +175,7 @@ header li {
 }
 
 footer {
-    /* position: absolute; */
+    clear: both;
     background: rgba(255, 255, 255, 0.7);
     height: 100px;
     width: 100%;
@@ -185,6 +185,10 @@ footer {
     height: 100%;
     display: inline-block;
     padding: 10px;
+}
+
+.footer-address {
+    vertical-align: top;
 }
 
 address {
@@ -236,14 +240,6 @@ address a {
 .content-text h1 {
     margin: 15px;
 }
-
-/* .content-img {
-    width: 50%;
-}
-
-.content-img img {
-    width: 100%;
-} */
 
 .timetable {
     display: flex;
@@ -346,6 +342,10 @@ address a {
 .schedule,
 .impressum {
     background-color: beige;
+}
+
+.studio {
+    clear: both;
 }
 
 .impressum {
