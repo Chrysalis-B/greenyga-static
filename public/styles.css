@@ -8,9 +8,7 @@ p {
 }
 
 header {
-    /* position: fixed; */
     z-index: 100;
-    /* top: 0; */
     background: white;
     height: 50px;
     width: 100%;
@@ -44,7 +42,6 @@ nav button {
 }
 
 nav button:hover {
-    /* background-color: #8dc34a; */
     box-shadow: 0 0 0 2px white;
 }
 
@@ -59,10 +56,6 @@ nav button:hover {
 main {
     min-height: 100vh;
     width: 100%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
 }
 
 .hero-text li,
@@ -172,6 +165,23 @@ header li {
 
 .hero-text button:hover {
     box-shadow: 0 0 0 2px white;
+}
+
+.images-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.image {
+    margin: 5px;
+}
+
+.image img {
+    height: 267px;
+    width: 200px;
+    object-fit: cover;
 }
 
 footer {
@@ -345,7 +355,13 @@ address a {
 }
 
 .studio {
-    clear: both;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact {
+    height: 150px;
 }
 
 .impressum {

@@ -1,11 +1,25 @@
-$("#pranic").on("click", function() {
-    $(".content").css("display", "block");
-    $(".content-text").html(loadDataPranic);
+Handlebars.templates = Handlebars.templates || {};
+
+var templates = document.querySelectorAll(
+    'script[type="text/x-handlebars-template"]'
+);
+
+Array.prototype.slice.call(templates).forEach(function(script) {
+    Handlebars.templates[script.id] = Handlebars.compile(script.innerHTML);
 });
+
+///////////////////////////////
 
 $("#plantation").on("click", function() {
     $(".content").css("display", "block");
+    $(".images-container").css("display", "flex");
     $(".content-text").html(loadDataPlant);
+});
+
+$("#pranic").on("click", function() {
+    $(".content").css("display", "block");
+    $(".images-container").css("display", "none");
+    $(".content-text").html(loadDataPranic);
 });
 
 function loadDataPlant() {
@@ -33,3 +47,45 @@ function loadDataPranic() {
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/I6bdx7zM9bw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
     return html;
 }
+
+var images = [
+    "./assets/gallery/001.jpg",
+    "./assets/gallery/002.jpg",
+    "./assets/gallery/003.jpg",
+    "./assets/gallery/004.jpg",
+    "./assets/gallery/005.jpg",
+    "./assets/gallery/006.jpg",
+    "./assets/gallery/007.jpg",
+    "./assets/gallery/008.jpg",
+    "./assets/gallery/009.jpg",
+    "./assets/gallery/010.jpg",
+    "./assets/gallery/011.jpg",
+    "./assets/gallery/012.jpg",
+    "./assets/gallery/013.jpg",
+    "./assets/gallery/014.jpg",
+    "./assets/gallery/015.jpg",
+    "./assets/gallery/016.jpg",
+    "./assets/gallery/017.jpg",
+    "./assets/gallery/018.jpg",
+    "./assets/gallery/019.jpg",
+    "./assets/gallery/020.jpg",
+    "./assets/gallery/021.jpg",
+    "./assets/gallery/022.jpg",
+    "./assets/gallery/023.jpg",
+    "./assets/gallery/024.jpg",
+    "./assets/gallery/025.jpg",
+    "./assets/gallery/026.jpg",
+    "./assets/gallery/027.jpg",
+    "./assets/gallery/028.jpg",
+    "./assets/gallery/029.jpg",
+    "./assets/gallery/030.jpg",
+    "./assets/gallery/031.jpg",
+    "./assets/gallery/032.jpg",
+    "./assets/gallery/033.jpg",
+    "./assets/gallery/034.jpg"
+];
+
+var imagesContainer = document.querySelector(".images-container");
+imagesContainer.innerHTML = Handlebars.templates.images({
+    images: images
+});
